@@ -28,24 +28,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcd-8J-NuY">
-                                <rect key="frame" x="212" y="20" width="176.5" height="31.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="VALLHALL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmC-2w-QGU">
+                                <rect key="frame" x="20" y="40" width="63.5" height="14.5"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MANDAG 9. NOVEMBER KL 20.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWn-ch-E03">
+                                <rect key="frame" x="20" y="58" width="190.5" height="14.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRENING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcd-8J-NuY">
+                                <rect key="frame" x="20" y="80" width="152" height="41"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="35"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="cWn-ch-E03" secondAttribute="leading" id="18P-X6-5G2"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="lmC-2w-QGU" secondAttribute="leading" id="5Xv-X4-PRf"/>
+                            <constraint firstItem="lmC-2w-QGU" firstAttribute="top" secondItem="x1M-sv-ZYF" secondAttribute="bottom" constant="20" id="9rH-qT-nJ2"/>
                             <constraint firstItem="gcd-8J-NuY" firstAttribute="top" secondItem="x1M-sv-ZYF" secondAttribute="bottom" id="Kw9-jD-ZXq"/>
+                            <constraint firstItem="cWn-ch-E03" firstAttribute="top" secondItem="lmC-2w-QGU" secondAttribute="bottom" constant="4" id="aKd-04-FWd"/>
+                            <constraint firstItem="gcd-8J-NuY" firstAttribute="top" secondItem="cWn-ch-E03" secondAttribute="bottom" constant="8" id="ccr-Pa-x52"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="gcd-8J-NuY" secondAttribute="leading" id="jRw-oq-agR"/>
                             <constraint firstItem="gcd-8J-NuY" firstAttribute="leading" secondItem="KCG-1c-JkA" secondAttribute="leadingMargin" id="lc5-dh-Mm5"/>
+                            <constraint firstItem="gcd-8J-NuY" firstAttribute="top" secondItem="cWn-ch-E03" secondAttribute="bottom" constant="8" id="nNC-Rj-R73"/>
                             <constraint firstItem="gcd-8J-NuY" firstAttribute="centerX" secondItem="KCG-1c-JkA" secondAttribute="centerX" id="vJi-iT-iOx"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="gcd-8J-NuY" secondAttribute="leading" id="zGY-6a-gAy"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Kw9-jD-ZXq"/>
+                                <exclude reference="ccr-Pa-x52"/>
                                 <exclude reference="lc5-dh-Mm5"/>
+                                <exclude reference="vJi-iT-iOx"/>
+                                <exclude reference="zGY-6a-gAy"/>
                             </mask>
                         </variation>
                     </view>
