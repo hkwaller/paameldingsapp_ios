@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tvt-Sa-V1a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tvt-Sa-V1a">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -51,10 +51,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MANDAG 9. NOVEMBER KL 20.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWn-ch-E03">
-                                        <rect key="frame" x="20" y="102" width="168" height="13"/>
+                                        <rect key="frame" x="20" y="102" width="250" height="13"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="168" id="KYa-aN-bXS"/>
+                                            <constraint firstAttribute="width" constant="250" id="KYa-aN-bXS"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ConduitITC-MediumItalic" family="Conduit ITC" pointSize="14"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -228,6 +228,9 @@
                         <outlet property="captchaView" destination="pLZ-4q-GkB" id="hkV-mh-b6r"/>
                         <outlet property="checkbox" destination="Q5t-1q-BLe" id="szR-no-Tey"/>
                         <outlet property="eventNameLabel" destination="gcd-8J-NuY" id="Mdf-fG-iCb"/>
+                        <outlet property="locationLabel" destination="lmC-2w-QGU" id="D4h-ff-Zlq"/>
+                        <outlet property="maxNumberPlacesLabel" destination="EW8-kQ-oFd" id="Ake-fS-uV1"/>
+                        <outlet property="startTimeLabel" destination="cWn-ch-E03" id="bmc-sF-mDq"/>
                         <outlet property="timeView" destination="w7i-oL-iKj" id="0hs-kF-HKO"/>
                     </connections>
                 </viewController>
