@@ -15,7 +15,7 @@
 		F8C04E431BEC9DA000685D7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C04E411BEC9DA000685D7C /* Main.storyboard */; };
 		F8C04E451BEC9DA000685D7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C04E441BEC9DA000685D7C /* Assets.xcassets */; };
 		F8C04E481BEC9DA000685D7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C04E461BEC9DA000685D7C /* LaunchScreen.storyboard */; };
-		F8DE479B1BECD8A200220021 /* conduit_itc_medium_italic1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8DE479A1BECD8A200220021 /* conduit_itc_medium_italic1.ttf */; };
+		F8DE479D1BECF19F00220021 /* conduit_itc_medium_italic1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8DE479C1BECF19F00220021 /* conduit_itc_medium_italic1.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		F8C04E441BEC9DA000685D7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8C04E471BEC9DA000685D7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8C04E491BEC9DA000685D7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8DE479A1BECD8A200220021 /* conduit_itc_medium_italic1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = conduit_itc_medium_italic1.ttf; path = ../../Downloads/conduit_itc_medium_italic1.ttf; sourceTree = "<group>"; };
+		F8DE479C1BECF19F00220021 /* conduit_itc_medium_italic1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = conduit_itc_medium_italic1.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 		F8DE47991BECD87500220021 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F8DE479A1BECD8A200220021 /* conduit_itc_medium_italic1.ttf */,
+				F8DE479C1BECF19F00220021 /* conduit_itc_medium_italic1.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -168,9 +168,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8C04E481BEC9DA000685D7C /* LaunchScreen.storyboard in Resources */,
-				F8DE479B1BECD8A200220021 /* conduit_itc_medium_italic1.ttf in Resources */,
 				F8C04E451BEC9DA000685D7C /* Assets.xcassets in Resources */,
 				F8C04E431BEC9DA000685D7C /* Main.storyboard in Resources */,
+				F8DE479D1BECF19F00220021 /* conduit_itc_medium_italic1.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
