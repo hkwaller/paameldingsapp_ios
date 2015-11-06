@@ -62,7 +62,7 @@
 				F8C04E491BEC9DA000685D7C /* Info.plist */,
 			);
 			path = Paameldingsapp;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -286,6 +286,7 @@
 				F8C04E4E1BEC9DA000685D7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
