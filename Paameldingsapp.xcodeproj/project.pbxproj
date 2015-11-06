@@ -62,7 +62,7 @@
 				F8C04E491BEC9DA000685D7C /* Info.plist */,
 			);
 			path = Paameldingsapp;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
