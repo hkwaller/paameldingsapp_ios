@@ -11,33 +11,31 @@ import Alamofire
 
 class PageViewController: UIPageViewController, UIGestureRecognizerDelegate {
     
-    var numberofpages = 2
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        EventsService.instance
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-
-        let eventViewController1 = storyboard.instantiateViewControllerWithIdentifier("EventViewController")
-        
-        
-        setViewControllers(
-            [eventViewController1], direction: .Forward, animated: true) { (Bool) in
-                print("something")
+        EventsService.instance.getUpcomingEvents { (status, events) in
+            print("Got upcoming events, updating stuff")
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            
+            let eventViewController = storyboard.instantiateViewControllerWithIdentifier("EventViewController") as! EventViewController
+            
+            eventViewController.eventIndex = 0
+            
+            self.setViewControllers(
+                [eventViewController], direction: .Forward, animated: true) { (result) in
+                    print("something")
+            }
         }
         
         dataSource  = self
         delegate = self
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
@@ -50,21 +48,41 @@ extension PageViewController: UIPageViewControllerDataSource {
     
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+        
+        let index = (viewController as! EventViewController).eventIndex!
+        
+        if (index <= 0) {
+            return nil
+        }
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        return storyboard.instantiateViewControllerWithIdentifier("EventViewController")
+        let eventViewController = storyboard.instantiateViewControllerWithIdentifier("EventViewController") as! EventViewController
+        
+        eventViewController.eventIndex = index - 1
+        
+        return eventViewController
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+
+        let index = (viewController as! EventViewController).eventIndex!
+
+        if index >= presentationCountForPageViewController(self) - 1 {
+            return nil
+        }
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 
-        return storyboard.instantiateViewControllerWithIdentifier("EventViewController")
+        let eventViewController = storyboard.instantiateViewControllerWithIdentifier("EventViewController") as! EventViewController
+        
+        eventViewController.eventIndex = index + 1
+        
+        return eventViewController
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        print("getting number of pages")
-        
-        return numberofpages
+        return EventsService.instance.getNumberOfUpcomingEvents()
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {

@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 class EventViewController : UIViewController {
+
+    var eventIndex: Int?
+
     @IBOutlet weak var eventNameLabel: UILabel!
     @IBOutlet weak var timeView: UIView!
     @IBOutlet weak var captchaView: UIView!
@@ -23,23 +26,34 @@ class EventViewController : UIViewController {
         captchaView.layer.cornerRadius = 3
         
         timeView.layer.cornerRadius = 3
-    
+
         renderLogo()
+
+        EventsService.instance.getUpcomingEvents { (status, events) in
+
+            guard let index = self.eventIndex, let actualEvents = events else {
+                print("Index or events not present, nothing to show")
+                return
+            }
+
+            let event = actualEvents[index]
+
+            self.eventNameLabel.text = event["subject"] as? String
+        }
     }
-    
-    
+
     override func viewWillLayoutSubviews() {
         self.view.layoutIfNeeded()
     }
     
     func renderLogo() {
         let logo = UIImage(named: "Logo")
-        
+
         let marginX = (self.navigationController!.navigationBar.frame.size.width / 2) - (logo!.size.width / 4);
         let imgView = UIImageView(frame: CGRectMake(marginX, 10, logo!.size.width / 2, logo!.size.height / 2))
-        
+
         imgView.image = logo
-        
+
         self.navigationController!.navigationBar.addSubview(imgView)
     }
 }

@@ -9,45 +9,60 @@
 import Foundation
 import Alamofire
 
-struct EventsService {
+class EventsService {
     
+    var cachedEvents: [AnyObject]?
     
     static let instance: EventsService = {
-        let eventsService = EventsService()
-        
-        eventsService.fetchUpcomingEvents()
-        
-        return eventsService
+        return EventsService()
     }()
     
     private init() {
         print("initilizing events service only once")
     }
     
-    private func fetchUpcomingEvents() {
-    
+    func getUpcomingEvents(completionHandler: (status: Int, events: [AnyObject]?) -> Void) {
+        
         print("Getting upcoming events")
         
+        if let fetchedCachedEvents = cachedEvents {
+            
+            print("Cached, using it")
+            
+            completionHandler(status: 200, events: fetchedCachedEvents)
+            return
+        }
+        
+        fetchUpcomingEvents(completionHandler)
+    }
+    
+    func getNumberOfUpcomingEvents() -> Int {
+        guard let fetchedCachedEvents = cachedEvents else {
+            return 0
+        }
+        
+        return fetchedCachedEvents.count
+    }
+    
+    private func fetchUpcomingEvents(completionHandler: (status: Int, events: [AnyObject]?) -> Void) {
+    
+        print("Fetching upcoming events")
+        
         Alamofire.request(.GET, "http://paamelding.herokuapp.com/api/events/upcoming").responseJSON { response in
+            
+            if let json = response.result.value {
+                print("json: \(json)")
+            }
             
             if let data = response.data {
                 let obj = try! NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
                 
                 if let events = obj as? [AnyObject] {
-                    for event in events {
-                        print(event["subject"])
-                        print(event["description"])
-                    }
+                    
+                    self.cachedEvents = events
+                    
+                    completionHandler(status: 200, events: events)
                 }
-                
-                
-            }
-            
-            if let json = response.result.value {
-                //print("JSON: \(JSON)")
-                
-                print("title: \(json)")
-                
             }
         }
     }
