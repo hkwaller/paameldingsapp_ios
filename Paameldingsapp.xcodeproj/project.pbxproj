@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18A666561BECAA320078B33E /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A666551BECAA320078B33E /* EventViewController.swift */; };
+		18A666581BECB9350078B33E /* EventsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A666571BECB9350078B33E /* EventsService.swift */; };
 		90DC2FAE231AB5769642F36F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85670B33879FA7D2B1BC7632 /* Pods.framework */; };
 		F8C04E3E1BEC9DA000685D7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C04E3D1BEC9DA000685D7C /* AppDelegate.swift */; };
 		F8C04E401BEC9DA000685D7C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C04E3F1BEC9DA000685D7C /* PageViewController.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		06E09AD191B6369A58E6EC53 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		18A666551BECAA320078B33E /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		18A666571BECB9350078B33E /* EventsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsService.swift; sourceTree = "<group>"; };
 		85670B33879FA7D2B1BC7632 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF842C007B1EB4DCE128176 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F8C04E3A1BEC9DA000685D7C /* Paameldingsapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paameldingsapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +89,7 @@
 				F8C04E461BEC9DA000685D7C /* LaunchScreen.storyboard */,
 				F8C04E491BEC9DA000685D7C /* Info.plist */,
 				18A666551BECAA320078B33E /* EventViewController.swift */,
+				18A666571BECB9350078B33E /* EventsService.swift */,
 			);
 			path = Paameldingsapp;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A666581BECB9350078B33E /* EventsService.swift in Sources */,
 				F8C04E401BEC9DA000685D7C /* PageViewController.swift in Sources */,
 				F8C04E3E1BEC9DA000685D7C /* AppDelegate.swift in Sources */,
 				18A666561BECAA320078B33E /* EventViewController.swift in Sources */,
