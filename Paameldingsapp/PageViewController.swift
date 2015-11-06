@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class PageViewController: UIPageViewController {
+class PageViewController: UIPageViewController, UIGestureRecognizerDelegate {
     
     var numberofpages = 2
 
@@ -38,6 +38,10 @@ class PageViewController: UIPageViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
 
 }

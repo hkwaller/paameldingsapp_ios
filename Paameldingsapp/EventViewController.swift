@@ -11,12 +11,25 @@ import UIKit
 
 class EventViewController : UIViewController {
     @IBOutlet weak var eventNameLabel: UILabel!
-    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    @IBOutlet weak var timeView: UIView!
+    @IBOutlet weak var captchaView: UIView!
+    @IBOutlet weak var checkbox: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        captchaView.layer.borderWidth = 0.5
+        captchaView.layer.borderColor = UIColor(red: 60.0, green: 60.0, blue: 60.0, alpha: 0.2).CGColor
+        captchaView.layer.cornerRadius = 3
+        
+        timeView.layer.cornerRadius = 3
     
         renderLogo()
+    }
+    
+    
+    override func viewWillLayoutSubviews() {
+        self.view.layoutIfNeeded()
     }
     
     func renderLogo() {

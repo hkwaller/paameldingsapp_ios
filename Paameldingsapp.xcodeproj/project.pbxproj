@@ -15,6 +15,7 @@
 		F8C04E431BEC9DA000685D7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C04E411BEC9DA000685D7C /* Main.storyboard */; };
 		F8C04E451BEC9DA000685D7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C04E441BEC9DA000685D7C /* Assets.xcassets */; };
 		F8C04E481BEC9DA000685D7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C04E461BEC9DA000685D7C /* LaunchScreen.storyboard */; };
+		F8DE479B1BECD8A200220021 /* conduit_itc_medium_italic1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8DE479A1BECD8A200220021 /* conduit_itc_medium_italic1.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F8C04E441BEC9DA000685D7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8C04E471BEC9DA000685D7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8C04E491BEC9DA000685D7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8DE479A1BECD8A200220021 /* conduit_itc_medium_italic1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = conduit_itc_medium_italic1.ttf; path = ../../Downloads/conduit_itc_medium_italic1.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		F8C04E311BEC9DA000685D7C = {
 			isa = PBXGroup;
 			children = (
+				F8DE47991BECD87500220021 /* Resources */,
 				F8C04E3C1BEC9DA000685D7C /* Paameldingsapp */,
 				F8C04E3B1BEC9DA000685D7C /* Products */,
 				1062C8C4229DC84921E6BAF5 /* Pods */,
@@ -92,6 +95,14 @@
 				18A666571BECB9350078B33E /* EventsService.swift */,
 			);
 			path = Paameldingsapp;
+			sourceTree = "<group>";
+		};
+		F8DE47991BECD87500220021 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F8DE479A1BECD8A200220021 /* conduit_itc_medium_italic1.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +140,7 @@
 				TargetAttributes = {
 					F8C04E391BEC9DA000685D7C = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 3GU3D426J4;
 					};
 				};
 			};
@@ -156,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8C04E481BEC9DA000685D7C /* LaunchScreen.storyboard in Resources */,
+				F8DE479B1BECD8A200220021 /* conduit_itc_medium_italic1.ttf in Resources */,
 				F8C04E451BEC9DA000685D7C /* Assets.xcassets in Resources */,
 				F8C04E431BEC9DA000685D7C /* Main.storyboard in Resources */,
 			);
@@ -333,10 +346,13 @@
 			baseConfigurationReference = ACF842C007B1EB4DCE128176 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Paameldingsapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.bekk.Paameldingsapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -345,10 +361,13 @@
 			baseConfigurationReference = 06E09AD191B6369A58E6EC53 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Paameldingsapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.bekk.Paameldingsapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
